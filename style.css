@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  background: linear-gradient(240deg, rgba(17, 21, 58, 1)20%,rgba(3, 5, 24, 0.85), rgba(81, 81, 84, 0.85));
+}
+
+
+:root {
+  --main-color: rgba(245, 189, 11, 1)
+}
+
+.stoper-panel {
+  width: 90%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, .7);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.name {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.time {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--main-color);
+ margin-top: 2.5rem;
+}
+
+.last-time {
+  color: white;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.buttons {
+  padding: 1.6rem 0;
+  text-align: center;
+}
+
+.buttons button {
+  padding: 0.3rem 0.8rem;
+  margin: 0 0.4rem;
+border: 2px solid var(--main-color);
+border-radius: 4px;
+background-color: transparent;
+color: white;
+cursor: pointer;
+transition: all .4s ease;
+}
+
+.buttons button:hover {
+  background-color: var(--main-color);
+}
+
+
+
+.paint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.colors-panel {
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  transform: translate(-2%, -50%);
+  background-color: transparent;
+  transition: all .5s ease-out;
+}
+
+.colors-panel.active {
+  right: 2%;
+}
+
+.gold, .blue, .red {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin: 0.8rem 0;
+  cursor: pointer;
+  transition: box-shadow .4s ease;
+}
+
+.gold {
+  background-color: rgba(245, 189, 11, 1);
+}
+
+.blue {
+  background-color: rgba(0, 58, 224, 1);
+}
+
+.red {
+ background-color: rgba(244, 11, 14, 1)
+}
+
+.gold:hover {
+  box-shadow: 0 0 10px rgba(245, 189, 11, 1) ;
+}
+
+.blue:hover {
+  box-shadow: 0 0 10px rgba(0, 58, 224, 1);
+}
+
+.red:hover {
+  box-shadow: 0 0 10px rgba(244, 11, 14, 1) ;
+}
+
+
+@media(min-width:600px) {
+  .stoper-panel {
+    max-width: 600px;
+    max-height: 450px;
+    background-color: rgba(0, 0, 0, .7);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .time {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--main-color);
+   margin-top: 5.5rem;
+  }
+
+  .buttons {
+    padding: 1.6rem 0;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .last-time {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
